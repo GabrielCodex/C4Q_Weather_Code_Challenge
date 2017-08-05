@@ -2,12 +2,15 @@
 
  ## Self Reflection
  
- I would the CollectionViewCell. I didn't spend a whole bunch of time on making it look pretty.
+Should have made my custom CollectionViewCell look beautiful.
 
 Realized late in the test that there are two dateTimeISO. One is nested into weatherCoded which is the one I went after. And the other dateTimeISO is a dictionary key in periods. 
  
- The dateTimeISO in weatherCoded can be nil or not exist. That caught me off guard. Should have spent more time looking at the data. Lesson learned. Made DateISO optional. I was running low on time so I would have like to handle nil in the model instead of handling it in the CollectionView Cell.
+ The dateTimeISO in weatherCoded can an empty array. That caught me off guard. Should have spent more time looking at the data. Lesson learned. Made DateISO optional. Should have handled nil in the model instead of in collectionview cellForItemAt.
 
 Made an Enum to handle Weather Errors but didn't get a chance to use it. 
 
+## Second Branch & Time Limit
+
+I made a new branch called gabriel with the completed project and fixes. I know my second branch is over the time limit, just wanted to finish the project. 
 
