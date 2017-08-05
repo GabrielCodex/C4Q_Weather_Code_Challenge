@@ -15,38 +15,32 @@ class Weather {
     
     let minTempFahrenheit: Int
     let maxTempFahrenheit: Int
-    let dateTimeISO: String?
+    let dateTimeISO: String
+    let weatherIcon: String
     
     
     
-    init(minTempFahrenheit: Int, maxTempFahrenheit: Int, dateTimeISO: String?) {
+    init(minTempFahrenheit: Int, maxTempFahrenheit: Int, dateTimeISO: String, weatherIcon: String) {
         self.minTempFahrenheit = minTempFahrenheit
         self.maxTempFahrenheit = maxTempFahrenheit
         self.dateTimeISO = dateTimeISO
+        self.weatherIcon = weatherIcon
         
     }
     
-    convenience init?(dictionary: [String : Any]) {
-        var dateTimeISO: String?
-      
+    convenience init?(dictionary: [String : Any]) {        
         
         guard let castedMinTempFahrenheit = dictionary["minTempF"] as? Int,
-        let castedMaxTempFahrenheit = dictionary["maxTempF"] as? Int,
-        let weatherCoded = dictionary["weatherCoded"] as? [[String : Any]] else {return nil}
+            let castedMaxTempFahrenheit = dictionary["maxTempF"] as? Int,
+            let castedDateTimeISO = dictionary["dateTimeISO"] as? String,
+            let castedWeatherIcon = dictionary["icon"] as? String else {return nil}
         
-        for dictionaryCoded in weatherCoded {
-            
-            guard let castedDateTimeISO = dictionaryCoded["dateTimeISO"] as? String else {return nil}
+        self.init(minTempFahrenheit: castedMinTempFahrenheit, maxTempFahrenheit: castedMaxTempFahrenheit, dateTimeISO: castedDateTimeISO, weatherIcon: castedWeatherIcon)
         
-            dateTimeISO = castedDateTimeISO
-        }
         
-        self.init(minTempFahrenheit: castedMinTempFahrenheit, maxTempFahrenheit: castedMaxTempFahrenheit, dateTimeISO: dateTimeISO)
-        
-    
         
     }
-   
+    
     
     
     static func buildForecastArray(from data: Data) -> [Weather]? {
@@ -64,7 +58,7 @@ class Weather {
                 
                 for dictionary in periods {
                     guard let forecastDictionary = Weather(dictionary: dictionary) else {continue}
-
+                    
                     forecastArray.append(forecastDictionary)
                 }
             }

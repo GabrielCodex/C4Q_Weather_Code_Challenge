@@ -18,8 +18,10 @@ private let collectionCellIdentifier = "forecastCell"
 
 class WeatherViewController: UIViewController{
     
+    @IBOutlet weak var conversionButton: UIButton!
     @IBOutlet weak var forecastCollectionView: UICollectionView!
     var forecast = [Weather]()
+    var conversion: Bool = true
     
     
     override func viewDidLoad() {
@@ -27,7 +29,10 @@ class WeatherViewController: UIViewController{
         loadWeatherData()
         forecastCollectionView.delegate = self
         forecastCollectionView.dataSource = self
-    
+        conversionButton.setTitle("Change to Celsius", for: .normal)
+        
+        
+        
     }
     
     func loadWeatherData(){
@@ -42,6 +47,36 @@ class WeatherViewController: UIViewController{
             }
         }
     }
+    
+    func dateFormatter(date: String) -> String {
+        let date = date
+        let formattedDate =  String(date.characters.dropLast(15))
+        return formattedDate
+    }
+    
+    func celsius(from fahrenheit: Int) -> String {
+        let celsiusDouble = Double(fahrenheit)
+        
+        let conversion = (celsiusDouble - 32) / 1.8
+        
+        return String(Int(conversion))
+    }
+    
+    
+    @IBAction func conversionPressed(_ sender: UIButton) {
+        if conversion == false {
+            conversion = true
+            conversionButton.setTitle("Change to Fahrenheit", for: .normal)
+            forecastCollectionView.reloadData()
+        } else {
+            conversion = false
+            conversionButton.setTitle("Change to Celsius", for: .normal)
+            forecastCollectionView.reloadData()
+        }
+        
+    }
+    
+    
 }
 
 extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -56,12 +91,18 @@ extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellIdentifier, for: indexPath) as! ForecastCollectionViewCell
         let weatherInfo = forecast[indexPath.row]
         
-        cell.highTempLabel.text = "High: \(weatherInfo.maxTempFahrenheit)ºF"
-        cell.lowTempLabel.text = "Low: \(weatherInfo.minTempFahrenheit)ºF"
-        cell.dateLabel.text = weatherInfo.dateTimeISO ?? "No Date"
-
-        //Would have changed the DateTimeISO To look better but out of time
+        if conversion == false {
+            
+            cell.highTempLabel.text = "High: \(celsius(from: weatherInfo.maxTempFahrenheit))ºC"
+            cell.lowTempLabel.text = "Low: \(celsius(from: weatherInfo.minTempFahrenheit))ºC"
+        } else {
+            
+            cell.highTempLabel.text = "High: \(weatherInfo.maxTempFahrenheit)ºF"
+            cell.lowTempLabel.text = "Low: \(weatherInfo.minTempFahrenheit)ºF"
+        }
         
+        cell.dateLabel.text = dateFormatter(date: weatherInfo.dateTimeISO)
+        cell.weatherIconImageView.image = UIImage(named: weatherInfo.weatherIcon)
         
         return cell
     }

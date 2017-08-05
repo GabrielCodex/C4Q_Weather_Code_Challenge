@@ -40,54 +40,73 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGm-XI-JGc">
-                                                    <rect key="frame" x="16" y="49" width="164" height="15"/>
+                                                    <rect key="frame" x="0.0" y="40" width="96" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmg-Ak-PLr">
-                                                    <rect key="frame" x="16" y="76" width="164" height="15"/>
+                                                    <rect key="frame" x="0.0" y="69" width="96" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFi-By-cmW">
-                                                    <rect key="frame" x="16" y="16" width="164" height="21"/>
+                                                    <rect key="frame" x="0.0" y="13" width="96" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DCt-Hq-HH7">
+                                                    <rect key="frame" x="104" y="20" width="75" height="73"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Pmg-Ak-PLr" firstAttribute="trailing" secondItem="nGm-XI-JGc" secondAttribute="trailing" id="8hs-VK-c3w"/>
-                                            <constraint firstItem="nGm-XI-JGc" firstAttribute="leading" secondItem="2zC-AS-747" secondAttribute="leadingMargin" constant="8" id="BqM-yT-BEd"/>
-                                            <constraint firstItem="yFi-By-cmW" firstAttribute="top" secondItem="2zC-AS-747" secondAttribute="topMargin" constant="8" id="Na9-ca-q4w"/>
-                                            <constraint firstItem="yFi-By-cmW" firstAttribute="leading" secondItem="2zC-AS-747" secondAttribute="leadingMargin" constant="8" id="Q1J-6l-ty8"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="nGm-XI-JGc" secondAttribute="trailing" id="WVm-uC-JeZ"/>
-                                            <constraint firstItem="nGm-XI-JGc" firstAttribute="top" secondItem="yFi-By-cmW" secondAttribute="bottom" constant="12" id="gNE-9f-pdQ"/>
-                                            <constraint firstItem="Pmg-Ak-PLr" firstAttribute="top" secondItem="nGm-XI-JGc" secondAttribute="bottom" constant="12" id="r1K-rg-DJv"/>
-                                            <constraint firstItem="yFi-By-cmW" firstAttribute="trailing" secondItem="2zC-AS-747" secondAttribute="trailingMargin" id="s81-t2-xuY"/>
-                                            <constraint firstItem="Pmg-Ak-PLr" firstAttribute="leading" secondItem="nGm-XI-JGc" secondAttribute="leading" id="wO3-1b-pp1"/>
+                                            <constraint firstItem="DCt-Hq-HH7" firstAttribute="leading" secondItem="nGm-XI-JGc" secondAttribute="trailing" constant="8" id="1n4-iE-TtX"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="DCt-Hq-HH7" secondAttribute="bottom" constant="12" id="Ezt-IH-lKM"/>
+                                            <constraint firstItem="DCt-Hq-HH7" firstAttribute="leading" secondItem="yFi-By-cmW" secondAttribute="trailing" constant="8" id="J1b-oj-jrM"/>
+                                            <constraint firstItem="DCt-Hq-HH7" firstAttribute="leading" secondItem="Pmg-Ak-PLr" secondAttribute="trailing" constant="8" id="SwC-OE-rqH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="DCt-Hq-HH7" secondAttribute="trailing" constant="1" id="TrC-Q3-Suz"/>
+                                            <constraint firstItem="DCt-Hq-HH7" firstAttribute="top" secondItem="2zC-AS-747" secondAttribute="topMargin" constant="12" id="XeU-F2-qr5"/>
+                                            <constraint firstItem="yFi-By-cmW" firstAttribute="leading" secondItem="2zC-AS-747" secondAttribute="leading" id="Xhu-SU-aQ1"/>
+                                            <constraint firstItem="nGm-XI-JGc" firstAttribute="top" secondItem="yFi-By-cmW" secondAttribute="bottom" constant="6" id="e55-n1-ERk"/>
+                                            <constraint firstItem="yFi-By-cmW" firstAttribute="top" secondItem="2zC-AS-747" secondAttribute="topMargin" constant="5" id="hPd-Hl-nO9"/>
+                                            <constraint firstItem="Pmg-Ak-PLr" firstAttribute="top" secondItem="nGm-XI-JGc" secondAttribute="bottom" constant="14" id="miA-zB-Bto"/>
+                                            <constraint firstItem="yFi-By-cmW" firstAttribute="leading" secondItem="nGm-XI-JGc" secondAttribute="trailing" constant="-96" id="ocO-ik-iMp"/>
+                                            <constraint firstItem="yFi-By-cmW" firstAttribute="leading" secondItem="nGm-XI-JGc" secondAttribute="leading" id="pdh-Xc-9F0"/>
+                                            <constraint firstItem="nGm-XI-JGc" firstAttribute="leading" secondItem="Pmg-Ak-PLr" secondAttribute="leading" id="sdl-sS-oY6"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="yFi-By-cmW" id="eEs-6a-Sre"/>
                                             <outlet property="highTempLabel" destination="nGm-XI-JGc" id="j4y-yk-5X5"/>
                                             <outlet property="lowTempLabel" destination="Pmg-Ak-PLr" id="F1o-hP-EFz"/>
+                                            <outlet property="weatherIconImageView" destination="DCt-Hq-HH7" id="FIp-j3-oe7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-hl-Aj7">
+                                <rect key="frame" x="96" y="215" width="181" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="conversionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgl-ih-zPn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZCb-hl-Aj7" firstAttribute="top" secondItem="9kH-3j-SsV" secondAttribute="bottom" constant="59" id="C2X-hq-zD3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9kH-3j-SsV" secondAttribute="bottom" constant="511" id="TYd-pA-H0A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9kH-3j-SsV" secondAttribute="trailing" constant="8" id="aRu-SL-S9L"/>
                             <constraint firstItem="9kH-3j-SsV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="blh-tA-Q4n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZCb-hl-Aj7" secondAttribute="trailing" constant="82" id="cBs-tL-Xqc"/>
                             <constraint firstItem="9kH-3j-SsV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="eT1-0f-wwd"/>
+                            <constraint firstItem="ZCb-hl-Aj7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="kaH-Ms-S4d"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="conversionButton" destination="ZCb-hl-Aj7" id="LAq-WH-7HM"/>
                         <outlet property="forecastCollectionView" destination="9kH-3j-SsV" id="RLM-1b-efB"/>
                     </connections>
                 </viewController>

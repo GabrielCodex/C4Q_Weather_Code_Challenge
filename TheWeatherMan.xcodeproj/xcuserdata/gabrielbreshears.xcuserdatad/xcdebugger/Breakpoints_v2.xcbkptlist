@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheWeatherMan/Weather.swift"
-            timestampString = "523586583.040836"
+            timestampString = "523589552.498576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "buildForecastArray(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheWeatherMan/Weather.swift"
-            timestampString = "523586583.040836"
+            timestampString = "523589552.498576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "buildForecastArray(from:)"
             landmarkType = "7">
          </BreakpointContent>
