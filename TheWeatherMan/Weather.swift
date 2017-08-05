@@ -10,13 +10,6 @@ import Foundation
 
 
 
-internal enum APIWeatherError: Error {
-    case respone(json: Any)
-    case weather(json: AnyObject)
-    case main
-    case wind
-    case time
-}
 
 class Weather {
     
